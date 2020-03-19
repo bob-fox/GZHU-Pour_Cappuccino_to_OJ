@@ -11,6 +11,7 @@ struct node
     }
 };
 node *root=new node(-1,NULL);    //root是一个假结点
+
 int find_key(int key)
 {
     for(node* p=root->rt;p;p=p->rt)

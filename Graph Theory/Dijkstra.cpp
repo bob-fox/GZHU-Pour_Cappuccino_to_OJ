@@ -49,12 +49,12 @@ struct Edge
     int v;
     int w;
     int next;
-}edge[1000000];
+}edge[1000005];
 
-int head[20000];
-int cnt=0;
-bool vis[20000];    //有无访问
-unsigned int F[20000];    //存最短路
+int head[200005];
+int cnt;
+bool vis[200005];    //有无访问
+unsigned int F[200005];    //存最短路
 
 void add(int u,int v,int w)
 {
@@ -118,13 +118,13 @@ struct Edge
     int v;
     int w;
     int next;
-}edge[200005];
+}edge[1000005];
 
 priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
-int head[100005];
-int cnt=0;
-bool vis[100005];
-int F[100005];
+int head[200005];
+int cnt;
+bool vis[200005];
+int F[200005];
 
 void add(int u,int v,int w)
 {

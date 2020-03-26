@@ -1,5 +1,6 @@
 /*--WinnieVenice--*/
 
+
 struct BinarySearchTree
 {
     #define type_data long long

@@ -1,11 +1,13 @@
 /*--waltz26--*/
 
+
 struct node
 {
     int h,i;
 };
 stack<node> s;
 int op[2];
+
 void monotonic_stack()
 {
     for (int i=1;i<=n;i++)

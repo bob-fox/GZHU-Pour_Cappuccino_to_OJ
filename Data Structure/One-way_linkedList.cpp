@@ -1,5 +1,6 @@
 /*--waltz26--*/
 
+
 struct node
 {
     int key;
@@ -12,13 +13,13 @@ struct node
 };
 node *root=new node(-1,NULL);    //root是一个假结点
 
-int find_key(int key)
+int find_key(int key)    //查找key
 {
     for(node* p=root->rt;p;p=p->rt)
         if(p->key==key) return 1;
     return 0;
 }
-void insert_key(int key,int pos)    //pos输入合法
+void insert_key(int key,int pos)    //插入key，需保证pos输入合法
 {
     node* p=root;
     while (--pos)
@@ -26,7 +27,7 @@ void insert_key(int key,int pos)    //pos输入合法
     node* target=new node(key,p->rt);
     p->rt=target;
 }
-void delete_key(int pos)    //pos输入合法
+void delete_key(int pos)    //删除key，需保证pos输入合法
 {
     node* p=root;
     while (--pos)

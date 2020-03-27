@@ -1,14 +1,15 @@
 /*--waltz26--*/
 
-ll fast_mod(ll a,ll b,ll mod)
+
+long long fast_mod(long long a,long long b,long long mod)
 {
-    ans=0;
+    long long ans=0;
     while(b)
     {
         if(b&1)
-        ans=(ans+a)%c;
+            ans=(ans+a)%mod;
         b=b>>1;
-        a=(a+a)%c;
+        a=(a+a)%mod;
     }
     return ans;
 }

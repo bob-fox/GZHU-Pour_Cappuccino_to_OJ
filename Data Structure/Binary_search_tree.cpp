@@ -12,11 +12,11 @@ struct BinarySearchTree
         type_data key;    //节点信息(二分标准)
         type_data val;    //额外维护的节点信息(不一定要看需求)
         Node *ls,*rs;
+
         Node()
         {
         	ls=rs=NULL;    //初始化
 		}
-
     }*root;    //树根(每次操作都从树根开始)
 
     inline void create(Node *&cur,type_data key,type_data val)    //节点创建

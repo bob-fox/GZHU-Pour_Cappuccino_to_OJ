@@ -1,12 +1,16 @@
 /*--waltz26--*/
 
+
+//快速排序-辅助数组
 int array[maxn];
 int t[maxn];    //临时数组
 
 void quicksort(int l,int r)
 {
     if (l>=r) return;    //空区间或者只有一个元素的区间
+
     int flag=array[rand()%(r-l+1)+l];    //rand%(r-l+1)+l表示随机取[l,r]的一个数
+
     int p=l,q=r;
     for (int i=l;i<=r;i++)
     {

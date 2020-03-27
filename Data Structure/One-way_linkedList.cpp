@@ -1,10 +1,12 @@
 /*--waltz26--*/
 
 
+//指针版
 struct node
 {
     int key;
     node* rt;
+
     node(int _key,node* _rt)    //构造函数
     {
         key=_key;

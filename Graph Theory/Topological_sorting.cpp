@@ -6,7 +6,7 @@ struct Edge
 {
     int v;
     int next;
-}edge[1000000];
+}edge[1000005];
 
 int head[200005];
 int cnt;

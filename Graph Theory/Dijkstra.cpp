@@ -12,7 +12,6 @@ struct Dijstra
     type_data d[maxsize];    //d[i]: i到源头的最短路
     priority_queue<pair<type_data,int>,vector<pair<type_data,int>>,greater<pair<type_data,int>>> q;//最小堆
 
-
     Dijstra(vector<pair<type_data,int>> a[],int n,int start)
     {    //参数表:(图,节点数,源头)
         assert(start<=n);    //防止溢出
@@ -154,7 +153,7 @@ int main()
     while (!q.empty())  
     {
         int x=q.top().second;
-        q.pop();
+        q.pop();    //在判断之前先pop
         if (vis[x]) continue;
         vis[x]=1;
 

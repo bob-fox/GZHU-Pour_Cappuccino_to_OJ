@@ -7,7 +7,7 @@ int deep[maxn],vis[maxn],head[maxn],f[maxn];    //deep记录结点深度，vis�
 struct Node
 {
     int v,next;
-}e[maxn*2];    //双向建边乘2
+}e[maxm*2];    //双向建边乘2
 
 void add_edge(int u,int v)
 {
@@ -15,17 +15,20 @@ void add_edge(int u,int v)
     e[tot].next=head[u];
     head[u]=tot++;
 }
+
 void build_tree(int root,int depth)    //建树，当此前所站在的点有下一个连接的点的时候，depth+1，然后继续递归下一个点
 {
     deep[root]=depth;
     vis[root]=1;
     for(int i=head[root];i!=-1;i=e[i].next)    
     {
-        if(vis[e[i].v]!=0)    continue;
+        if(vis[e[i].v]!=0)
+            continue;
         f[e[i].v]=root;
         build_tree(e[i].v,depth+1);
     }
 }
+
 int LCA(int u,int v)    //暴力版的LCA
 {
     while(deep[u]>deep[v])    u=f[u];//先保证u和v在同一深度
@@ -37,10 +40,14 @@ int LCA(int u,int v)    //暴力版的LCA
     }
     return u;    //返回去u，v都是一样的
 }
+
 int main()
 {
+    int n,m;
     cin>>n>>m;
+
     memset(head,-1,sizeof(head));
+    
     for(int i=1;i<n;i++)
     {
         int a,b,c;
@@ -52,7 +59,7 @@ int main()
     
     for(int i=1;i<=m;i++)    //查询LCA
     {
-	int x,y;
+	    int x,y;
         cin>>x>>y;
         cout<<LCA(x,y)<<endl;
     }

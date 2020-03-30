@@ -10,10 +10,10 @@ struct Edge
 }edge[1000005];
 
 queue<int> q;
-int head[20005];
+int head[200005];
 int cnt=0;
-bool vis[20005];    //有无访问
-unsigned int F[20005];    //存最短路
+bool vis[200005];    //有无访问
+unsigned int F[200005];    //存最短路
 
 void add(int u,int v,int w)
 {

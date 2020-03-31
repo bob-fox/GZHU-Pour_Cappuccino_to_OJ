@@ -11,7 +11,7 @@ void msort(int l,int r)
 
     int mid=l+r>>1;
     msort(l,mid);
-    msort(mid+1,l);
+    msort(mid+1,r);
 
     int i=l,j=mid+1,k=l;
     while(i<=mid&&j<=r)

@@ -1,0 +1,47 @@
+\documentclass[UTF8]{ctexart}
+\usepackage[fleqn]{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{comment}
+\usepackage{amsmath,amssymb}
+\usepackage{cite}
+\usepackage{fullpage}
+\usepackage{fancyvrb}
+\begin{document}
+\title{回文质数关于偶数位回文数非质数(除11)的证明}
+\date{\today}
+\author{WinnieVenice}
+\maketitle
+因为一个n位数的数都可以表示成:$\sum_{i=1}^n a_i*10^{i-1}$，所以一个偶数位回文数可以表示为:$\sum_{i=1}^{2k} a_i*10^{i-1}$。
+根据回文性质又可以表示为$N=\sum_{i=1}^k a_i*(10^{2k-i}+10^{i-1})$。
+
+要证明N不是质数，只需要证明N是合数，根据合数的性质也就只需要证明$N\equiv0$ mod $\alpha,\alpha\in \textbf{常数}$。
+由于N的任意性即$a_i$的任意性，所以有个显然的想法是证明$\forall (10^{2k-i}+10^{i-1})\equiv0$ mod $\alpha$。
+\begin{align*}
+\textbf{证明} \quad &\because  1\leq i \leq k \\
+&\therefore  2k-i\geq k > k-1 \geq i-1 \geq 0 \\
+&\therefore  10^{2k-i}+10^{i-1} \leftrightarrow 10^{i-1}*(10^{2*(k-i)+1}+1) \\
+&\because  i=1,10^{i-1} \equiv 1 \\
+&\therefore  \textbf{我们去证明：} \forall 10^{2*(k-i)+1}+1 \equiv 0 \ \textup{mod} \ \alpha 
+\end{align*}
+\qquad因为$11\leq10^{2*(k-i)+1}+1$(取等\ $\leftrightarrow i=1$),且11是个质数，所以我们大胆的认为$\alpha=11$。所以需要证明
+$10^{2*(k-i)+1}+1\equiv0 \ \textup{mod} \ 11$。
+\begin{align*}
+\textbf{证明} \quad 10^{2*(k-i)+1}+1&=1+(11-1)^{2*(k-i)+1} \\
+&=1+\sum_{j=0}^T C_T^j*11^j*(-1)^{T-j},T=2*(k-i)+1 \\
+&=1+C_T^0*11^0*(-1)^T+\sum_{j=1}^T C_T^j*11^j*(-1)^{T-j} \\
+&=1+(-1)^T+\sum_{j=1}^T C_T^j*11^j*(-1)^{T-j}
+\end{align*}
+\begin{align*}
+&\because T=2*(k-i)+1\in \textbf{奇数} \quad \therefore (-1)^T=-1 \\
+&\Rightarrow 1-1+\sum_{j=1}^T C_T^j*11^j*(-1)^{T-j} \\
+&\Rightarrow \sum_{j=1}^T C_T^j*11^j*(-1)^{T-j} \\
+&\textbf{显然} \quad \sum_{j=1}^T C_T^j*11^j*(-1)^{T-j} \equiv 0 \ \textup{mod} \ 11
+\end{align*}
+\qquad综上所述，可得除了非11外的偶数位回文数都不是质数。\textbf{证毕}。
+\end{document}

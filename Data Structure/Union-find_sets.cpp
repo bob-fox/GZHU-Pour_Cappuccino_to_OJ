@@ -7,7 +7,7 @@ int ans;    //存储最大联通数
 
 int check_anc(int x)    //寻找祖先
 {
-    if (fa[x]) return fa[x]=check_anc(fa[x]);
+    if (fa[x]) return fa[x]=check_anc(fa[x]);    //路径压缩
     return x;
 }
 void union_anc(int x,int y)    //合并

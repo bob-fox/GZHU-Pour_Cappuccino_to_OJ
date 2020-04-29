@@ -1,6 +1,7 @@
 /*--waltz26--*/
 
 
+//标准
 struct node
 {
     int u,v,w;

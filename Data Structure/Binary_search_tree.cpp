@@ -1,7 +1,7 @@
 /*--WinnieVenice--*/
 
 
-//二叉搜索树-封装
+//指针版/封装
 struct BinarySearchTree
 {
     #define type_data long long

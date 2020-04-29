@@ -1,7 +1,7 @@
 /*--waltz26--*/
 
 
-//ST表-最小值应用
+//ST表-最小值
 int f[20][100005];
 int lg2[100005];
 
@@ -29,4 +29,42 @@ int main()
 
     int s=log2(r-l+1);
     cout<<min(f[s][l],f[s][r-(1<<s)+1])<<'\n';
+}
+
+
+/*--waltz26--*/
+
+
+//ST表-GCD
+int f[20][100005];
+int lg2[100005];
+
+int main()
+{
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    int n,q;
+    cin>>n>>q;
+
+    int t=0;
+    for (int i=1;i<=n;i++)    //初始化log2
+    {
+        if (i>=(1<<(t+1))) t++;
+        lg2[i]=t;
+    }
+
+    for (int i=1;i<=n;i++)
+        cin>>f[0][i];
+
+    for (int j=1;j<17;j++)
+        for (int i=1;i+(1<<(j-1))<=n;i++)
+	        f[j][i]=gcd(f[j-1][i],f[j-1][i+(1<<(j-1))]);
+
+    while (q--)
+    {
+        int l,r;
+        cin>>l>>r;
+        int s=lg2[r-l+1]; 
+        cout<<gcd(f[s][l],f[s][r-(1<<s)+1])<<'\n';
+    }
+    return 0;
 }

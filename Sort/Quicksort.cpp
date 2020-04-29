@@ -1,7 +1,7 @@
 /*--waltz26--*/
 
 
-//快速排序-辅助数组
+//辅助数组
 int array[maxn];
 int t[maxn];    //临时数组
 

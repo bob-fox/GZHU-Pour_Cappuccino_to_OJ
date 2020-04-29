@@ -1,12 +1,11 @@
 /*--waltz26--*/
 
 
-//set存储方式,进制hash
+//set存储方式/进制hash
 set<string> a[100005];
     
 int main()
 {
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
     int n;
     cin>>n;
  

@@ -41,7 +41,6 @@ int lg2[100005];
 
 int main()
 {
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
     int n,q;
     cin>>n>>q;
 

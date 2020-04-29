@@ -1,6 +1,7 @@
 /*--waltz26--*/
 
 
+//带取模
 long long fast_power(int a,int b,int mod)
 {
     long long ans=1,base=a;

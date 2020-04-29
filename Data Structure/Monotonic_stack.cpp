@@ -1,6 +1,7 @@
 /*--waltz26--*/
 
 
+//单调递增栈
 struct node
 {
     int h,i;

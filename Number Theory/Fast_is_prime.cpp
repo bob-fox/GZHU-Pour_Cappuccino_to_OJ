@@ -1,6 +1,7 @@
 /*--waltz26--*/
 
 
+//标准
 bool fast_is_prime(int n)
 {
     if (n==1) return 0;

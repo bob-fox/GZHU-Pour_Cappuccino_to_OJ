@@ -1,6 +1,7 @@
 /*--waltz26--*/
 
 
+//string转int
 long long basek_to_base10(string s,int base)
 {
     long long ans=0;

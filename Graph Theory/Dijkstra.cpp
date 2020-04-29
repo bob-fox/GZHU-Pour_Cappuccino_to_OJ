@@ -1,7 +1,7 @@
 /*--WinnieVenice--*/
 
 
-//二叉堆优化-封装
+//二叉堆优化/封装
 struct Dijstra
 {
     #define type_data int;    //节点权值数据类型

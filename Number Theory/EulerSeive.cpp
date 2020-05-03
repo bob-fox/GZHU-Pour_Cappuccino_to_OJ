@@ -19,7 +19,7 @@ struct EulerSeive{
     int sz;//规模
     vector<bool> vis;
     vector<int> pri;//质数筛
-    vector<ll>phi,miu;
+    vector<ll>phi,miu;//欧拉函数,莫比乌斯函数
     EulerSeive(int n):sz(n),vis(n,0),phi(n,0),miu(n,0){init();}
     inline void init(){
         vis[0]=vis[1]=1;

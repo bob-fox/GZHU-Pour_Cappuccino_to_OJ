@@ -1,5 +1,6 @@
 /*--WinnieVenice--*/
 
+
 typedef long long ll;
 pair<ll,ll> exgcd(ll a,ll b){ //pair(x,y)
     if(!b) return {1,0};

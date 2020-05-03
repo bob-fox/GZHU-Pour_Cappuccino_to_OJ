@@ -1,7 +1,7 @@
 /*--WinnieVenice--*/
 
 
-//欧拉筛(筛质数,筛欧拉函数和莫比乌斯函数前缀和)-带模
+//筛质数,筛欧拉函数和莫比乌斯函数前缀和-带模
 typedef long long ll;
 const int N=2e6;//欧拉筛的规模
 const int mod=7+1e9;
@@ -48,4 +48,3 @@ struct EulerSeive{
         }
     }
 }es(N);
-
